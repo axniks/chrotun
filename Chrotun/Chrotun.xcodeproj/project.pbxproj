@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		770B6FB514E004880092DAEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770B6FB414E004880092DAEC /* UIKit.framework */; };
+		770B6FB714E004880092DAEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770B6FB614E004880092DAEC /* Foundation.framework */; };
+		770B6FB914E004880092DAEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770B6FB814E004880092DAEC /* CoreGraphics.framework */; };
+		770B6FBF14E004880092DAEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FBD14E004880092DAEC /* InfoPlist.strings */; };
+		770B6FC114E004880092DAEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC014E004880092DAEC /* main.m */; };
+		770B6FC514E004880092DAEC /* ChrotunAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */; };
+		770B6FC814E004880092DAEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */; };
+		770B6FCB14E004880092DAEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */; };
+		770B6FCE14E004880092DAEC /* ChrotunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FCD14E004880092DAEC /* ChrotunViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		770B6FB014E004880092DAEC /* Chrotun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chrotun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		770B6FB414E004880092DAEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		770B6FB614E004880092DAEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		770B6FB814E004880092DAEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		770B6FBC14E004880092DAEC /* Chrotun-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chrotun-Info.plist"; sourceTree = "<group>"; };
+		770B6FBE14E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		770B6FC014E004880092DAEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		770B6FC214E004880092DAEC /* Chrotun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chrotun-Prefix.pch"; sourceTree = "<group>"; };
+		770B6FC314E004880092DAEC /* ChrotunAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChrotunAppDelegate.h; sourceTree = "<group>"; };
+		770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChrotunAppDelegate.m; sourceTree = "<group>"; };
+		770B6FC714E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		770B6FCA14E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		770B6FCC14E004880092DAEC /* ChrotunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChrotunViewController.h; sourceTree = "<group>"; };
+		770B6FCD14E004880092DAEC /* ChrotunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChrotunViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		770B6FAD14E004880092DAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770B6FB514E004880092DAEC /* UIKit.framework in Frameworks */,
+				770B6FB714E004880092DAEC /* Foundation.framework in Frameworks */,
+				770B6FB914E004880092DAEC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		770B6FA514E004880092DAEC = {
+			isa = PBXGroup;
+			children = (
+				770B6FBA14E004880092DAEC /* Chrotun */,
+				770B6FB314E004880092DAEC /* Frameworks */,
+				770B6FB114E004880092DAEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		770B6FB114E004880092DAEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				770B6FB014E004880092DAEC /* Chrotun.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		770B6FB314E004880092DAEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				770B6FB414E004880092DAEC /* UIKit.framework */,
+				770B6FB614E004880092DAEC /* Foundation.framework */,
+				770B6FB814E004880092DAEC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		770B6FBA14E004880092DAEC /* Chrotun */ = {
+			isa = PBXGroup;
+			children = (
+				770B6FC314E004880092DAEC /* ChrotunAppDelegate.h */,
+				770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */,
+				770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */,
+				770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */,
+				770B6FCC14E004880092DAEC /* ChrotunViewController.h */,
+				770B6FCD14E004880092DAEC /* ChrotunViewController.m */,
+				770B6FBB14E004880092DAEC /* Supporting Files */,
+			);
+			path = Chrotun;
+			sourceTree = "<group>";
+		};
+		770B6FBB14E004880092DAEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				770B6FBC14E004880092DAEC /* Chrotun-Info.plist */,
+				770B6FBD14E004880092DAEC /* InfoPlist.strings */,
+				770B6FC014E004880092DAEC /* main.m */,
+				770B6FC214E004880092DAEC /* Chrotun-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		770B6FAF14E004880092DAEC /* Chrotun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 770B6FD114E004880092DAEC /* Build configuration list for PBXNativeTarget "Chrotun" */;
+			buildPhases = (
+				770B6FAC14E004880092DAEC /* Sources */,
+				770B6FAD14E004880092DAEC /* Frameworks */,
+				770B6FAE14E004880092DAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chrotun;
+			productName = Chrotun;
+			productReference = 770B6FB014E004880092DAEC /* Chrotun.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		770B6FA714E004880092DAEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 770B6FAA14E004880092DAEC /* Build configuration list for PBXProject "Chrotun" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 770B6FA514E004880092DAEC;
+			productRefGroup = 770B6FB114E004880092DAEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				770B6FAF14E004880092DAEC /* Chrotun */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		770B6FAE14E004880092DAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770B6FBF14E004880092DAEC /* InfoPlist.strings in Resources */,
+				770B6FC814E004880092DAEC /* MainStoryboard_iPhone.storyboard in Resources */,
+				770B6FCB14E004880092DAEC /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		770B6FAC14E004880092DAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770B6FC114E004880092DAEC /* main.m in Sources */,
+				770B6FC514E004880092DAEC /* ChrotunAppDelegate.m in Sources */,
+				770B6FCE14E004880092DAEC /* ChrotunViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		770B6FBD14E004880092DAEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				770B6FBE14E004880092DAEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				770B6FC714E004880092DAEC /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				770B6FCA14E004880092DAEC /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		770B6FCF14E004880092DAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		770B6FD014E004880092DAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		770B6FD214E004880092DAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chrotun/Chrotun-Prefix.pch";
+				INFOPLIST_FILE = "Chrotun/Chrotun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		770B6FD314E004880092DAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chrotun/Chrotun-Prefix.pch";
+				INFOPLIST_FILE = "Chrotun/Chrotun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		770B6FAA14E004880092DAEC /* Build configuration list for PBXProject "Chrotun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				770B6FCF14E004880092DAEC /* Debug */,
+				770B6FD014E004880092DAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		770B6FD114E004880092DAEC /* Build configuration list for PBXNativeTarget "Chrotun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				770B6FD214E004880092DAEC /* Debug */,
+				770B6FD314E004880092DAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 770B6FA714E004880092DAEC /* Project object */;
+}
