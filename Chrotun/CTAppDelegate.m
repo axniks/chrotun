@@ -1,14 +1,14 @@
 //
-//  ChrotunAppDelegate.m
+//  CTAppDelegate.m
 //  Chrotun
 //
 //  Created by Axel Niklasson on 06/02/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ChrotunAppDelegate.h"
+#import "CTAppDelegate.h"
 
-@implementation ChrotunAppDelegate
+@implementation CTAppDelegate
 
 @synthesize window = _window;
 

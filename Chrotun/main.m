@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ChrotunAppDelegate.h"
+#import "CTAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ChrotunAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([CTAppDelegate class]));
     }
 }

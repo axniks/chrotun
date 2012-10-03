@@ -1,5 +1,5 @@
 //
-//  ChrotunViewController.h
+//  CTAppDelegate.h
 //  Chrotun
 //
 //  Created by Axel Niklasson on 06/02/2012.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChrotunViewController : UIViewController
+@interface CTAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end

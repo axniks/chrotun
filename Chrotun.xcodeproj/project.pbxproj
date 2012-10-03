@@ -11,12 +11,13 @@
 		770B6FB714E004880092DAEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770B6FB614E004880092DAEC /* Foundation.framework */; };
 		770B6FBF14E004880092DAEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FBD14E004880092DAEC /* InfoPlist.strings */; };
 		770B6FC114E004880092DAEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC014E004880092DAEC /* main.m */; };
-		770B6FC514E004880092DAEC /* ChrotunAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */; };
+		770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC414E004880092DAEC /* CTAppDelegate.m */; };
 		770B6FC814E004880092DAEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */; };
 		770B6FCB14E004880092DAEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */; };
-		770B6FCE14E004880092DAEC /* ChrotunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FCD14E004880092DAEC /* ChrotunViewController.m */; };
+		770B6FCE14E004880092DAEC /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FCD14E004880092DAEC /* CTViewController.m */; };
 		77531742161B519C00CA2C57 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77531741161B519C00CA2C57 /* Accelerate.framework */; };
 		77531750161C3E4100CA2C57 /* libdywapitchtrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */; };
+		77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531752161C3F5B00CA2C57 /* CTPitchTracker.m */; };
 		779720C314EDDB9900A0494D /* IosAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779720C214EDDB9900A0494D /* IosAudioController.m */; };
 		779720CB14EDDCBE00A0494D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779720CA14EDDCBD00A0494D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -29,15 +30,17 @@
 		770B6FBE14E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		770B6FC014E004880092DAEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		770B6FC214E004880092DAEC /* Chrotun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chrotun-Prefix.pch"; sourceTree = "<group>"; };
-		770B6FC314E004880092DAEC /* ChrotunAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChrotunAppDelegate.h; sourceTree = "<group>"; };
-		770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChrotunAppDelegate.m; sourceTree = "<group>"; };
+		770B6FC314E004880092DAEC /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
+		770B6FC414E004880092DAEC /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
 		770B6FC714E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		770B6FCA14E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		770B6FCC14E004880092DAEC /* ChrotunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChrotunViewController.h; sourceTree = "<group>"; };
-		770B6FCD14E004880092DAEC /* ChrotunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChrotunViewController.m; sourceTree = "<group>"; };
+		770B6FCC14E004880092DAEC /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
+		770B6FCD14E004880092DAEC /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
 		77531741161B519C00CA2C57 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		7753174E161C3E4100CA2C57 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack.h; sourceTree = "<group>"; };
 		7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdywapitchtrack.a; path = Vendor/libdywapitchtrack.a; sourceTree = "<group>"; };
+		77531751161C3F5B00CA2C57 /* CTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPitchTracker.h; sourceTree = "<group>"; };
+		77531752161C3F5B00CA2C57 /* CTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPitchTracker.m; sourceTree = "<group>"; };
 		779720C114EDDB9900A0494D /* IosAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IosAudioController.h; sourceTree = "<group>"; };
 		779720C214EDDB9900A0494D /* IosAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IosAudioController.m; sourceTree = "<group>"; };
 		779720CA14EDDCBD00A0494D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -92,14 +95,16 @@
 		770B6FBA14E004880092DAEC /* Chrotun */ = {
 			isa = PBXGroup;
 			children = (
+				77531751161C3F5B00CA2C57 /* CTPitchTracker.h */,
+				77531752161C3F5B00CA2C57 /* CTPitchTracker.m */,
 				779720C114EDDB9900A0494D /* IosAudioController.h */,
 				779720C214EDDB9900A0494D /* IosAudioController.m */,
-				770B6FC314E004880092DAEC /* ChrotunAppDelegate.h */,
-				770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */,
+				770B6FC314E004880092DAEC /* CTAppDelegate.h */,
+				770B6FC414E004880092DAEC /* CTAppDelegate.m */,
 				770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */,
 				770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */,
-				770B6FCC14E004880092DAEC /* ChrotunViewController.h */,
-				770B6FCD14E004880092DAEC /* ChrotunViewController.m */,
+				770B6FCC14E004880092DAEC /* CTViewController.h */,
+				770B6FCD14E004880092DAEC /* CTViewController.m */,
 				770B6FBB14E004880092DAEC /* Supporting Files */,
 			);
 			path = Chrotun;
@@ -180,9 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				770B6FC114E004880092DAEC /* main.m in Sources */,
-				770B6FC514E004880092DAEC /* ChrotunAppDelegate.m in Sources */,
-				770B6FCE14E004880092DAEC /* ChrotunViewController.m in Sources */,
+				770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */,
+				770B6FCE14E004880092DAEC /* CTViewController.m in Sources */,
 				779720C314EDDB9900A0494D /* IosAudioController.m in Sources */,
+				77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

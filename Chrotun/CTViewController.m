@@ -1,23 +1,23 @@
 //
-//  ChrotunViewController.m
+//  CTViewController.m
 //  Chrotun
 //
 //  Created by Axel Niklasson on 06/02/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ChrotunViewController.h"
+#import "CTViewController.h"
 #import "IosAudioController.h"
 #import "dywapitchtrack.h"
 
-@interface ChrotunViewController()
+@interface CTViewController()
 @property (nonatomic, strong) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UILabel *frequencyLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startStopButton;
 
 @end
 
-@implementation ChrotunViewController
+@implementation CTViewController
 
 - (SInt32)indexForFundamentalFrequency
 {
