@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-// comment for github
-
 @interface ChrotunViewController : UIViewController
 
 @end

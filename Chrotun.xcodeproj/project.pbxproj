@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		770B6FB514E004880092DAEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770B6FB414E004880092DAEC /* UIKit.framework */; };
 		770B6FB714E004880092DAEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770B6FB614E004880092DAEC /* Foundation.framework */; };
-		770B6FB914E004880092DAEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770B6FB814E004880092DAEC /* CoreGraphics.framework */; };
 		770B6FBF14E004880092DAEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FBD14E004880092DAEC /* InfoPlist.strings */; };
 		770B6FC114E004880092DAEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC014E004880092DAEC /* main.m */; };
 		770B6FC514E004880092DAEC /* ChrotunAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */; };
 		770B6FC814E004880092DAEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */; };
 		770B6FCB14E004880092DAEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */; };
 		770B6FCE14E004880092DAEC /* ChrotunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FCD14E004880092DAEC /* ChrotunViewController.m */; };
+		77531742161B519C00CA2C57 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77531741161B519C00CA2C57 /* Accelerate.framework */; };
+		77531750161C3E4100CA2C57 /* libdywapitchtrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */; };
+		779720C314EDDB9900A0494D /* IosAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779720C214EDDB9900A0494D /* IosAudioController.m */; };
+		779720CB14EDDCBE00A0494D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779720CA14EDDCBD00A0494D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		770B6FB014E004880092DAEC /* Chrotun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chrotun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		770B6FB414E004880092DAEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		770B6FB614E004880092DAEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		770B6FB814E004880092DAEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		770B6FBC14E004880092DAEC /* Chrotun-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chrotun-Info.plist"; sourceTree = "<group>"; };
 		770B6FBE14E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		770B6FC014E004880092DAEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -33,6 +35,12 @@
 		770B6FCA14E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		770B6FCC14E004880092DAEC /* ChrotunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChrotunViewController.h; sourceTree = "<group>"; };
 		770B6FCD14E004880092DAEC /* ChrotunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChrotunViewController.m; sourceTree = "<group>"; };
+		77531741161B519C00CA2C57 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		7753174E161C3E4100CA2C57 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack.h; sourceTree = "<group>"; };
+		7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdywapitchtrack.a; path = Vendor/libdywapitchtrack.a; sourceTree = "<group>"; };
+		779720C114EDDB9900A0494D /* IosAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IosAudioController.h; sourceTree = "<group>"; };
+		779720C214EDDB9900A0494D /* IosAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IosAudioController.m; sourceTree = "<group>"; };
+		779720CA14EDDCBD00A0494D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,9 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77531742161B519C00CA2C57 /* Accelerate.framework in Frameworks */,
+				779720CB14EDDCBE00A0494D /* AudioToolbox.framework in Frameworks */,
 				770B6FB514E004880092DAEC /* UIKit.framework in Frameworks */,
 				770B6FB714E004880092DAEC /* Foundation.framework in Frameworks */,
-				770B6FB914E004880092DAEC /* CoreGraphics.framework in Frameworks */,
+				77531750161C3E4100CA2C57 /* libdywapitchtrack.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +79,12 @@
 		770B6FB314E004880092DAEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7753174E161C3E4100CA2C57 /* dywapitchtrack.h */,
+				7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */,
+				77531741161B519C00CA2C57 /* Accelerate.framework */,
+				779720CA14EDDCBD00A0494D /* AudioToolbox.framework */,
 				770B6FB414E004880092DAEC /* UIKit.framework */,
 				770B6FB614E004880092DAEC /* Foundation.framework */,
-				770B6FB814E004880092DAEC /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,6 +92,8 @@
 		770B6FBA14E004880092DAEC /* Chrotun */ = {
 			isa = PBXGroup;
 			children = (
+				779720C114EDDB9900A0494D /* IosAudioController.h */,
+				779720C214EDDB9900A0494D /* IosAudioController.m */,
 				770B6FC314E004880092DAEC /* ChrotunAppDelegate.h */,
 				770B6FC414E004880092DAEC /* ChrotunAppDelegate.m */,
 				770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */,
@@ -167,6 +182,7 @@
 				770B6FC114E004880092DAEC /* main.m in Sources */,
 				770B6FC514E004880092DAEC /* ChrotunAppDelegate.m in Sources */,
 				770B6FCE14E004880092DAEC /* ChrotunViewController.m in Sources */,
+				779720C314EDDB9900A0494D /* IosAudioController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +232,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -235,7 +251,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -252,8 +268,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chrotun/Chrotun-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = "Chrotun/Chrotun-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Vendor\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -261,13 +284,65 @@
 		770B6FD314E004880092DAEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Axel Niklasson";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Niklasson";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chrotun/Chrotun-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = "Chrotun/Chrotun-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Vendor\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BF197ED8-46BA-4DCB-918C-3752D049EDB6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BF197ED8-46BA-4DCB-918C-3752D049EDB6";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		7716B1A214F3B74A0028CC9E /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad hoc";
+		};
+		7716B1A314F3B74A0028CC9E /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Niklasson";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chrotun/Chrotun-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				INFOPLIST_FILE = "Chrotun/Chrotun-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Vendor\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E2B0E1C-38A8-49EB-B01A-C4E612898C8B";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad hoc";
 		};
 /* End XCBuildConfiguration section */
 
@@ -277,6 +352,7 @@
 			buildConfigurations = (
 				770B6FCF14E004880092DAEC /* Debug */,
 				770B6FD014E004880092DAEC /* Release */,
+				7716B1A214F3B74A0028CC9E /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -286,8 +362,10 @@
 			buildConfigurations = (
 				770B6FD214E004880092DAEC /* Debug */,
 				770B6FD314E004880092DAEC /* Release */,
+				7716B1A314F3B74A0028CC9E /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
