@@ -7,67 +7,44 @@
 //
 
 #import "CTViewController.h"
-#import "IosAudioController.h"
-#import "dywapitchtrack.h"
+#import "CTPitchTracker.h"
 
 @interface CTViewController()
 @property (nonatomic, strong) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UILabel *frequencyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *averageFrequencyLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startStopButton;
-
+@property (nonatomic, strong) CTPitchTracker *pitchTracker;
+@property (nonatomic, strong) NSNumberFormatter *formatter;
 @end
 
 @implementation CTViewController
-
-- (SInt32)indexForFundamentalFrequency
-{
-    if (iosAudio.isRunning) {
-        SInt32 *result = iosAudio.fftOutData;
-        SInt32 maxValue = *result;
-        int32_t maxIndex = 0;
-        int32_t length = iosAudio.fftLength;
-        
-        for (int i=0; i<length; i++) {
-            if (result[i]>maxValue) {
-                maxValue = result[i];
-                maxIndex = i;
-            }
-        }
-        return maxIndex;
-    } 
-    else
-        return 0;
+- (NSNumberFormatter *)formatter {
+    if (!_formatter) {
+        _formatter = [[NSNumberFormatter alloc] init];
+        [_formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        [_formatter setMaximumFractionDigits:0];
+    }
+    return _formatter;
 }
 
 - (void)refreshFrequency {
-    self.frequencyLabel.text = [NSString stringWithFormat:@"%ld", [self indexForFundamentalFrequency]];
+    self.frequencyLabel.text = [NSString stringWithFormat:@"%@", [self.formatter stringFromNumber:self.pitchTracker.currentPitch]];
+    self.averageFrequencyLabel.text = [NSString stringWithFormat:@"%@", [self.formatter stringFromNumber:self.pitchTracker.averagePitch]];
 }
 
-/*
-- (SInt32 *)getFFTData
-{
-    if (iosAudio.isRunning) return iosAudio.fftOutData; 
-    else return 0;
-}
-
-- (int32_t)getFFTLength
-{
-    if (iosAudio.isRunning) return iosAudio.fftLength;
-    else return 0;
-}
-*/
 - (IBAction)startButtonPressed:(UIButton *)sender {
     if ([sender.titleLabel.text isEqualToString:@"Start"]) {
         // start
         [self.startStopButton setTitle:@"Stop" forState:UIControlStateNormal];
-        [iosAudio start];
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(refreshFrequency) userInfo:nil repeats:YES];
+        self.pitchTracker = [[CTPitchTracker alloc] init];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(refreshFrequency) userInfo:nil repeats:YES];
         
     } else {
         // stop
         [self.startStopButton setTitle:@"Start" forState:UIControlStateNormal];
-        self.frequencyLabel.text = @"-";
-        [iosAudio stop];
+        self.frequencyLabel.text = @"[off]";
+        self.pitchTracker = nil;
         [self.timer invalidate];
     }
     
@@ -84,10 +61,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 
-    iosAudio = [[IosAudioController alloc] init];
-
+    self.frequencyLabel.text = @"[off]";
 }
 
 - (void)viewDidUnload
@@ -96,6 +71,7 @@
     [self setView:nil];
     [self setFrequencyLabel:nil];
     [self setStartStopButton:nil];
+    [self setAverageFrequencyLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -17,7 +17,13 @@
 		770B6FCE14E004880092DAEC /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FCD14E004880092DAEC /* CTViewController.m */; };
 		77531742161B519C00CA2C57 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77531741161B519C00CA2C57 /* Accelerate.framework */; };
 		77531750161C3E4100CA2C57 /* libdywapitchtrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */; };
-		77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531752161C3F5B00CA2C57 /* CTPitchTracker.m */; };
+		77531753161C3F5B00CA2C57 /* CTPitchTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77531752161C3F5B00CA2C57 /* CTPitchTracker.mm */; };
+		77531761161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531760161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m */; };
+		77531764161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531763161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m */; };
+		7753176D161C6F0A00CA2C57 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */; };
+		7753176E161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */; };
+		7753176F161C6F0A00CA2C57 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7753176B161C6F0A00CA2C57 /* CAXException.cpp */; };
+		77531772161C713500CA2C57 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531770161C713500CA2C57 /* CADebugPrintf.cpp */; };
 		779720C314EDDB9900A0494D /* IosAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779720C214EDDB9900A0494D /* IosAudioController.m */; };
 		779720CB14EDDCBE00A0494D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779720CA14EDDCBD00A0494D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +46,20 @@
 		7753174E161C3E4100CA2C57 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack.h; sourceTree = "<group>"; };
 		7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdywapitchtrack.a; path = Vendor/libdywapitchtrack.a; sourceTree = "<group>"; };
 		77531751161C3F5B00CA2C57 /* CTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPitchTracker.h; sourceTree = "<group>"; };
-		77531752161C3F5B00CA2C57 /* CTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPitchTracker.m; sourceTree = "<group>"; };
+		77531752161C3F5B00CA2C57 /* CTPitchTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CTPitchTracker.mm; sourceTree = "<group>"; };
+		7753175F161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeGrownFFTTracker.h; sourceTree = "<group>"; };
+		77531760161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHomeGrownFFTTracker.m; sourceTree = "<group>"; };
+		77531762161C505300CA2C57 /* CTAccelerateFFTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAccelerateFFTPitchTracker.h; sourceTree = "<group>"; };
+		77531763161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAccelerateFFTPitchTracker.m; sourceTree = "<group>"; };
+		77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		77531767161C6F0A00CA2C57 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		77531768161C6F0A00CA2C57 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		7753176A161C6F0A00CA2C57 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		7753176B161C6F0A00CA2C57 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		7753176C161C6F0A00CA2C57 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		77531770161C713500CA2C57 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
+		77531771161C713500CA2C57 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
 		779720C114EDDB9900A0494D /* IosAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IosAudioController.h; sourceTree = "<group>"; };
 		779720C214EDDB9900A0494D /* IosAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IosAudioController.m; sourceTree = "<group>"; };
 		779720CA14EDDCBD00A0494D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -82,6 +101,7 @@
 		770B6FB314E004880092DAEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77531765161C6F0A00CA2C57 /* iPublicUtility */,
 				7753174E161C3E4100CA2C57 /* dywapitchtrack.h */,
 				7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */,
 				77531741161B519C00CA2C57 /* Accelerate.framework */,
@@ -96,7 +116,11 @@
 			isa = PBXGroup;
 			children = (
 				77531751161C3F5B00CA2C57 /* CTPitchTracker.h */,
-				77531752161C3F5B00CA2C57 /* CTPitchTracker.m */,
+				77531752161C3F5B00CA2C57 /* CTPitchTracker.mm */,
+				77531762161C505300CA2C57 /* CTAccelerateFFTPitchTracker.h */,
+				77531763161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m */,
+				7753175F161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.h */,
+				77531760161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m */,
 				779720C114EDDB9900A0494D /* IosAudioController.h */,
 				779720C214EDDB9900A0494D /* IosAudioController.m */,
 				770B6FC314E004880092DAEC /* CTAppDelegate.h */,
@@ -119,6 +143,22 @@
 				770B6FC214E004880092DAEC /* Chrotun-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77531765161C6F0A00CA2C57 /* iPublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				77531770161C713500CA2C57 /* CADebugPrintf.cpp */,
+				77531771161C713500CA2C57 /* CADebugPrintf.h */,
+				77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */,
+				77531767161C6F0A00CA2C57 /* CADebugMacros.h */,
+				77531768161C6F0A00CA2C57 /* CAMath.h */,
+				77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */,
+				7753176A161C6F0A00CA2C57 /* CAStreamBasicDescription.h */,
+				7753176B161C6F0A00CA2C57 /* CAXException.cpp */,
+				7753176C161C6F0A00CA2C57 /* CAXException.h */,
+			);
+			path = iPublicUtility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +228,13 @@
 				770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */,
 				770B6FCE14E004880092DAEC /* CTViewController.m in Sources */,
 				779720C314EDDB9900A0494D /* IosAudioController.m in Sources */,
-				77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */,
+				77531753161C3F5B00CA2C57 /* CTPitchTracker.mm in Sources */,
+				77531761161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m in Sources */,
+				77531764161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m in Sources */,
+				7753176D161C6F0A00CA2C57 /* CADebugMacros.cpp in Sources */,
+				7753176E161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp in Sources */,
+				7753176F161C6F0A00CA2C57 /* CAXException.cpp in Sources */,
+				77531772161C713500CA2C57 /* CADebugPrintf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +327,10 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Vendor\"",
 				);
+				OTHER_CFLAGS = (
+					"-x",
+					"objective-c++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -300,6 +350,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Vendor\"",
+				);
+				OTHER_CFLAGS = (
+					"-x",
+					"objective-c++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BF197ED8-46BA-4DCB-918C-3752D049EDB6";
@@ -342,6 +396,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Vendor\"",
+				);
+				OTHER_CFLAGS = (
+					"-x",
+					"objective-c++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E2B0E1C-38A8-49EB-B01A-C4E612898C8B";
