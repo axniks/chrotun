@@ -31,7 +31,8 @@
 
     self.pitchTracker = [[CTPitchTracker alloc] initWithPitchTrackingHandler:^(NSNumber *pitch) {
 
-        self.pitchLabel.text = [NSString stringWithFormat:@"%@ Hz", [formatter stringFromNumber:pitch]];
+        self.pitchLabel.text = [NSString stringWithFormat:@"%@ Hz",
+                                [formatter stringFromNumber:pitch]];
     }];
 }
 

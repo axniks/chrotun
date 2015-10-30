@@ -38,7 +38,9 @@ const int kSamplesNeeded = 2048;
 }
 
 // audio render procedure, don't allocate memory, don't take any locks, don't waste time
-static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioActionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData)
+static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioActionFlags,
+                            const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber,
+                            UInt32 inNumberFrames, AudioBufferList *ioData)
 {
     CTPitchTracker *THIS = (__bridge CTPitchTracker *)inRefCon;
 
@@ -60,7 +62,8 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
 	try {
         // Obtain recorded samples
         
-        XThrowIfError(AudioUnitRender(THIS.rioUnit, ioActionFlags, inTimeStamp, inBusNumber, inNumberFrames, &bufferList), "Failed to render input");
+        XThrowIfError(AudioUnitRender(THIS.rioUnit, ioActionFlags, inTimeStamp, inBusNumber,
+                                      inNumberFrames, &bufferList), "Failed to render input");
        
     }
 	catch (CAXException &e) {
@@ -84,15 +87,17 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
 - (void)setupRemoteIO
 {
     // set our required format - LPCM non-interleaved 32 bit floating point
-    CAStreamBasicDescription outFormat = CAStreamBasicDescription(44100, // sample rate
-                                                                  kAudioFormatLinearPCM, // format id
-                                                                  kBytesPerSample, // bytes per packet
-                                                                  1, // frames per packet
-                                                                  kBytesPerSample, // bytes per frame
-                                                                  1, // channels per frame
-                                                                  32, // bits per channel
-                                                                kAudioFormatFlagIsFloat | kAudioFormatFlagIsNonInterleaved);
-
+    CAStreamBasicDescription outFormat = CAStreamBasicDescription
+    (44100,                             // sample rate
+     kAudioFormatLinearPCM,             // format id
+     kBytesPerSample,                   // bytes per packet
+     1,                                 // frames per packet
+     kBytesPerSample,                   // bytes per frame
+     1,                                 // channels per frame
+     32,                                // bits per channel
+     kAudioFormatFlagIsFloat |          // flags
+     kAudioFormatFlagIsNonInterleaved);
+    
 	try {
 		// Open the output unit
 		AudioComponentDescription desc;
@@ -107,15 +112,27 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
 		AudioComponentInstanceNew(comp, &_rioUnit);
         
 		UInt32 one = 1;
-		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioOutputUnitProperty_EnableIO, kAudioUnitScope_Input, 1, &one, sizeof(one)), "couldn't enable input on the remote I/O unit");
+		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioOutputUnitProperty_EnableIO,
+                                           kAudioUnitScope_Input, 1, &one, sizeof(one)),
+                      "couldn't enable input on the remote I/O unit");
         
         AURenderCallbackStruct callbackStruct;
         callbackStruct.inputProc = renderInput;
         callbackStruct.inputProcRefCon = (__bridge void*)self;
-		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioOutputUnitProperty_SetInputCallback, kAudioUnitScope_Global, 0, &callbackStruct, sizeof(callbackStruct)), "couldn't set remote i/o render callback");
+        
+		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioOutputUnitProperty_SetInputCallback,
+                                           kAudioUnitScope_Global, 0, &callbackStruct,
+                                           sizeof(callbackStruct)),
+                      "couldn't set remote i/o render callback");
 		
-		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioUnitProperty_StreamFormat, kAudioUnitScope_Input, 0, &outFormat, sizeof(outFormat)), "couldn't set the remote I/O unit's output client format");
-		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioUnitProperty_StreamFormat, kAudioUnitScope_Output, 1, &outFormat, sizeof(outFormat)), "couldn't set the remote I/O unit's input client format");
+		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioUnitProperty_StreamFormat,
+                                           kAudioUnitScope_Input, 0, &outFormat, sizeof(outFormat)),
+                      "couldn't set the remote I/O unit's output client format");
+        
+		XThrowIfError(AudioUnitSetProperty(_rioUnit, kAudioUnitProperty_StreamFormat,
+                                           kAudioUnitScope_Output, 1, &outFormat,
+                                           sizeof(outFormat)),
+                      "couldn't set the remote I/O unit's input client format");
         
 		XThrowIfError(AudioUnitInitialize(_rioUnit), "couldn't initialize the remote I/O unit");
 		XThrowIfError(AudioOutputUnitStart(_rioUnit), "couldn't start the remote I/O unit");
@@ -149,9 +166,11 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
     
     // create buffer with samples or append to existing buffer
     if (!self.buffer) {
-        self.buffer = [NSMutableData dataWithBytes:bufferList->mBuffers[0].mData length:bufferList->mBuffers[0].mDataByteSize];
+        self.buffer = [NSMutableData dataWithBytes:bufferList->mBuffers[0].mData
+                                            length:bufferList->mBuffers[0].mDataByteSize];
     } else {
-        [self.buffer appendBytes:bufferList->mBuffers[0].mData length:bufferList->mBuffers[0].mDataByteSize];
+        [self.buffer appendBytes:bufferList->mBuffers[0].mData
+                          length:bufferList->mBuffers[0].mDataByteSize];
     }
     
     // check if we have enough samples to calculate pitch
