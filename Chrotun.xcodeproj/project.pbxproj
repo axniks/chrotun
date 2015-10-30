@@ -13,7 +13,6 @@
 		770B6FC114E004880092DAEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC014E004880092DAEC /* main.m */; };
 		770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC414E004880092DAEC /* CTAppDelegate.m */; };
 		770B6FC814E004880092DAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC614E004880092DAEC /* Main.storyboard */; };
-		770B6FCE14E004880092DAEC /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FCD14E004880092DAEC /* CTViewController.m */; };
 		7713A3FB162470DD0033C735 /* dywapitchtrack.c in Sources */ = {isa = PBXBuildFile; fileRef = 7713A3F9162470DD0033C735 /* dywapitchtrack.c */; };
 		7713A3FD162471EF0033C735 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7713A3FC162471EF0033C735 /* Accelerate.framework */; };
 		77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531752161C3F5B00CA2C57 /* CTPitchTracker.m */; };
@@ -23,6 +22,7 @@
 		77531772161C713500CA2C57 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531770161C713500CA2C57 /* CADebugPrintf.cpp */; };
 		777F33241BE3C09600A1AD01 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */; };
 		777F33261BE3C0BA00A1AD01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777F33251BE3C0BA00A1AD01 /* Images.xcassets */; };
+		777F332F1BE3CB3A00A1AD01 /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777F332E1BE3CB3A00A1AD01 /* CTViewController.m */; };
 		779720CB14EDDCBE00A0494D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779720CA14EDDCBD00A0494D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +37,6 @@
 		770B6FC314E004880092DAEC /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
 		770B6FC414E004880092DAEC /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
 		770B6FC714E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		770B6FCC14E004880092DAEC /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTViewController.h; path = ViewControllers/CTViewController.h; sourceTree = "<group>"; };
-		770B6FCD14E004880092DAEC /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CTViewController.m; path = ViewControllers/CTViewController.m; sourceTree = "<group>"; };
 		7713A3F9162470DD0033C735 /* dywapitchtrack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dywapitchtrack.c; path = Vendor/dywapitchtrack/dywapitchtrack.c; sourceTree = "<group>"; };
 		7713A3FA162470DD0033C735 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack/dywapitchtrack.h; sourceTree = "<group>"; };
 		7713A3FC162471EF0033C735 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -55,6 +53,8 @@
 		77531771161C713500CA2C57 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CADebugPrintf.h; path = ../../Chrotun/Vendor/iPublicUtility/CADebugPrintf.h; sourceTree = "<group>"; };
 		777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		777F33251BE3C0BA00A1AD01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		777F332D1BE3CB3A00A1AD01 /* CTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTViewController.h; path = ViewControllers/CTViewController.h; sourceTree = "<group>"; };
+		777F332E1BE3CB3A00A1AD01 /* CTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTViewController.m; path = ViewControllers/CTViewController.m; sourceTree = "<group>"; };
 		779720CA14EDDCBD00A0494D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -183,8 +183,8 @@
 		777F332B1BE3C87900A1AD01 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				770B6FCC14E004880092DAEC /* CTViewController.h */,
-				770B6FCD14E004880092DAEC /* CTViewController.m */,
+				777F332D1BE3CB3A00A1AD01 /* CTViewController.h */,
+				777F332E1BE3CB3A00A1AD01 /* CTViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -255,10 +255,10 @@
 			files = (
 				770B6FC114E004880092DAEC /* main.m in Sources */,
 				770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */,
-				770B6FCE14E004880092DAEC /* CTViewController.m in Sources */,
 				77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */,
 				7753176D161C6F0A00CA2C57 /* CADebugMacros.cpp in Sources */,
 				7753176E161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp in Sources */,
+				777F332F1BE3CB3A00A1AD01 /* CTViewController.m in Sources */,
 				7753176F161C6F0A00CA2C57 /* CAXException.cpp in Sources */,
 				77531772161C713500CA2C57 /* CADebugPrintf.cpp in Sources */,
 				7713A3FB162470DD0033C735 /* dywapitchtrack.c in Sources */,
