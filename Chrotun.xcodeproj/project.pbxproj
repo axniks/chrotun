@@ -13,11 +13,11 @@
 		770B6FC114E004880092DAEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC014E004880092DAEC /* main.m */; };
 		770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC414E004880092DAEC /* CTAppDelegate.m */; };
 		770B6FC814E004880092DAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC614E004880092DAEC /* Main.storyboard */; };
-		7713A3FB162470DD0033C735 /* dywapitchtrack.c in Sources */ = {isa = PBXBuildFile; fileRef = 7713A3F9162470DD0033C735 /* dywapitchtrack.c */; };
+		7713A3FB162470DD0033C735 /* dywapitchtrack.c in Sources */ = {isa = PBXBuildFile; fileRef = 7713A3F9162470DD0033C735 /* dywapitchtrack.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		7713A3FD162471EF0033C735 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7713A3FC162471EF0033C735 /* Accelerate.framework */; };
 		77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531752161C3F5B00CA2C57 /* CTPitchTracker.m */; };
 		7753176D161C6F0A00CA2C57 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */; };
-		7753176E161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */; };
+		7753176E161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		7753176F161C6F0A00CA2C57 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7753176B161C6F0A00CA2C57 /* CAXException.cpp */; };
 		77531772161C713500CA2C57 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531770161C713500CA2C57 /* CADebugPrintf.cpp */; };
 		777F33241BE3C09600A1AD01 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */; };
