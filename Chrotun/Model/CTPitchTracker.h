@@ -11,7 +11,8 @@
 
 @interface CTPitchTracker : NSObject
 
-@property (atomic, strong) NSNumber *currentPitch;
+- (instancetype)initWithPitchTrackingHandler:(void (^)(NSNumber *pitch))pitchHandler;
 
 - (void) processAudio: (AudioBufferList*) bufferList;
+
 @end

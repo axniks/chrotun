@@ -11,7 +11,7 @@
 #import "CAXException.h"
 #import "dywapitchtrack.h"
 
-const int kBytesPerSample = 4;
+const double kBytesPerSample = 4.0;
 const int kSamplesNeeded = 2048;
 
 @interface CTPitchTracker()
@@ -24,6 +24,9 @@ const int kSamplesNeeded = 2048;
 @property (nonatomic) double sinPhase;
 @property (nonatomic) dywapitchtracker tracker;
 @property (nonatomic) dispatch_queue_t analysisQueue;
+
+@property (nonatomic, copy) void (^pitchUpdateHandler)(NSNumber *pitch);
+
 @end
 
 @implementation CTPitchTracker
@@ -127,12 +130,15 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
 
 }
 
-- (id) init {
+- (instancetype)initWithPitchTrackingHandler:(void (^)(NSNumber *pitch))pitchHandler {
+
     if (self = [super init]) {
+
+        self.pitchUpdateHandler = pitchHandler;
         [self setupRemoteIO];
         dywapitch_inittracking(&_tracker);
-	}
-	return self;
+    }
+    return self;
 }
 
 - (void) dealloc {
@@ -160,7 +166,15 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
         }
     
         // calculate pitch
-        self.currentPitch = [NSNumber numberWithDouble:dywapitch_computepitch(&_tracker, samplesAsDouble, 0, numberOfSamples)];
+        double pitch = dywapitch_computepitch(&_tracker, samplesAsDouble, 0, numberOfSamples);
+        
+        if (self.pitchUpdateHandler && pitch != 0.0) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+
+                self.pitchUpdateHandler(@(pitch));
+            });
+        }
 
         // purge buffer
         self.buffer = nil;

@@ -23,30 +23,23 @@
 #pragma mark - View lifecycle
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     [super viewWillAppear:animated];
     
-    self.pitchTracker = [[CTPitchTracker alloc] init];
-    
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.05
-                                                  target:self
-                                                selector:@selector(refreshFrequency)
-                                                userInfo:nil
-                                                 repeats:YES];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    formatter.maximumFractionDigits = 0;
+
+    self.pitchTracker = [[CTPitchTracker alloc] initWithPitchTrackingHandler:^(NSNumber *pitch) {
+
+        self.pitchLabel.text = [NSString stringWithFormat:@"%@ Hz", [formatter stringFromNumber:pitch]];
+    }];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [self.timer invalidate];
+
     self.pitchTracker = nil;
+
     [super viewDidDisappear:animated];
-}
-
-
-#pragma mark - UI refresh
-
-- (void)refreshFrequency {
-    
-    self.pitchLabel.text = [NSString stringWithFormat:@"%@", self.pitchTracker.currentPitch];
 }
 
 @end
