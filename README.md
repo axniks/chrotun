@@ -1,8 +1,8 @@
 A free, open source, well performing, attractive looking chromatic tuner for iPhone using [dywapitchtrack](http://www.schmittmachine.com/dywapitchtrack.html)
 
-#MIT open source licence
+ MIT open source licence
  
- Copyright (c) 2010 Axel Niklasson
+ Copyright (c) 2015 Axel Niklasson
   
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
