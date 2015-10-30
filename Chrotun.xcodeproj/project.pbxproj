@@ -37,22 +37,22 @@
 		770B6FC314E004880092DAEC /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
 		770B6FC414E004880092DAEC /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
 		770B6FC714E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		770B6FCC14E004880092DAEC /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
-		770B6FCD14E004880092DAEC /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
-		7713A3F9162470DD0033C735 /* dywapitchtrack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dywapitchtrack.c; sourceTree = "<group>"; };
-		7713A3FA162470DD0033C735 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dywapitchtrack.h; sourceTree = "<group>"; };
+		770B6FCC14E004880092DAEC /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTViewController.h; path = ViewControllers/CTViewController.h; sourceTree = "<group>"; };
+		770B6FCD14E004880092DAEC /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CTViewController.m; path = ViewControllers/CTViewController.m; sourceTree = "<group>"; };
+		7713A3F9162470DD0033C735 /* dywapitchtrack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dywapitchtrack.c; path = Vendor/dywapitchtrack/dywapitchtrack.c; sourceTree = "<group>"; };
+		7713A3FA162470DD0033C735 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack/dywapitchtrack.h; sourceTree = "<group>"; };
 		7713A3FC162471EF0033C735 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		77531751161C3F5B00CA2C57 /* CTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPitchTracker.h; sourceTree = "<group>"; };
-		77531752161C3F5B00CA2C57 /* CTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPitchTracker.m; sourceTree = "<group>"; };
-		77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
-		77531767161C6F0A00CA2C57 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
-		77531768161C6F0A00CA2C57 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
-		77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
-		7753176A161C6F0A00CA2C57 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
-		7753176B161C6F0A00CA2C57 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
-		7753176C161C6F0A00CA2C57 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
-		77531770161C713500CA2C57 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
-		77531771161C713500CA2C57 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
+		77531751161C3F5B00CA2C57 /* CTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPitchTracker.h; path = Model/CTPitchTracker.h; sourceTree = "<group>"; };
+		77531752161C3F5B00CA2C57 /* CTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPitchTracker.m; path = Model/CTPitchTracker.m; sourceTree = "<group>"; };
+		77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CADebugMacros.cpp; path = ../../Chrotun/Vendor/iPublicUtility/CADebugMacros.cpp; sourceTree = "<group>"; };
+		77531767161C6F0A00CA2C57 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CADebugMacros.h; path = ../../Chrotun/Vendor/iPublicUtility/CADebugMacros.h; sourceTree = "<group>"; };
+		77531768161C6F0A00CA2C57 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAMath.h; path = ../../Chrotun/Vendor/iPublicUtility/CAMath.h; sourceTree = "<group>"; };
+		77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAStreamBasicDescription.cpp; path = ../../Chrotun/Vendor/iPublicUtility/CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		7753176A161C6F0A00CA2C57 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAStreamBasicDescription.h; path = ../../Chrotun/Vendor/iPublicUtility/CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		7753176B161C6F0A00CA2C57 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAXException.cpp; path = ../../Chrotun/Vendor/iPublicUtility/CAXException.cpp; sourceTree = "<group>"; };
+		7753176C161C6F0A00CA2C57 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAXException.h; path = ../../Chrotun/Vendor/iPublicUtility/CAXException.h; sourceTree = "<group>"; };
+		77531770161C713500CA2C57 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CADebugPrintf.cpp; path = ../../Chrotun/Vendor/iPublicUtility/CADebugPrintf.cpp; sourceTree = "<group>"; };
+		77531771161C713500CA2C57 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CADebugPrintf.h; path = ../../Chrotun/Vendor/iPublicUtility/CADebugPrintf.h; sourceTree = "<group>"; };
 		777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		777F33251BE3C0BA00A1AD01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		779720CA14EDDCBD00A0494D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				7713A3FC162471EF0033C735 /* Accelerate.framework */,
-				77531765161C6F0A00CA2C57 /* iPublicUtility */,
 				779720CA14EDDCBD00A0494D /* AudioToolbox.framework */,
 				770B6FB414E004880092DAEC /* UIKit.framework */,
 				770B6FB614E004880092DAEC /* Foundation.framework */,
@@ -105,15 +104,10 @@
 		770B6FBA14E004880092DAEC /* Chrotun */ = {
 			isa = PBXGroup;
 			children = (
-				770B6FC614E004880092DAEC /* Main.storyboard */,
-				777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */,
-				7713A3FA162470DD0033C735 /* dywapitchtrack.h */,
-				7713A3F9162470DD0033C735 /* dywapitchtrack.c */,
-				77531751161C3F5B00CA2C57 /* CTPitchTracker.h */,
-				77531752161C3F5B00CA2C57 /* CTPitchTracker.m */,
-				770B6FCC14E004880092DAEC /* CTViewController.h */,
-				770B6FCD14E004880092DAEC /* CTViewController.m */,
-				777F33251BE3C0BA00A1AD01 /* Images.xcassets */,
+				777F33291BE3C85B00A1AD01 /* Views and assets */,
+				777F332B1BE3C87900A1AD01 /* ViewControllers */,
+				777F332A1BE3C86800A1AD01 /* Model */,
+				777F33271BE3C82F00A1AD01 /* Vendor */,
 				770B6FBB14E004880092DAEC /* Supporting Files */,
 			);
 			path = Chrotun;
@@ -146,7 +140,53 @@
 				7753176C161C6F0A00CA2C57 /* CAXException.h */,
 			);
 			name = iPublicUtility;
-			path = Vendor/iPublicUtility;
+			path = ../Vendor/iPublicUtility;
+			sourceTree = "<group>";
+		};
+		777F33271BE3C82F00A1AD01 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				77531765161C6F0A00CA2C57 /* iPublicUtility */,
+				777F33281BE3C83600A1AD01 /* dywapitchtrack */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		777F33281BE3C83600A1AD01 /* dywapitchtrack */ = {
+			isa = PBXGroup;
+			children = (
+				7713A3FA162470DD0033C735 /* dywapitchtrack.h */,
+				7713A3F9162470DD0033C735 /* dywapitchtrack.c */,
+			);
+			name = dywapitchtrack;
+			sourceTree = "<group>";
+		};
+		777F33291BE3C85B00A1AD01 /* Views and assets */ = {
+			isa = PBXGroup;
+			children = (
+				770B6FC614E004880092DAEC /* Main.storyboard */,
+				777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */,
+				777F33251BE3C0BA00A1AD01 /* Images.xcassets */,
+			);
+			name = "Views and assets";
+			sourceTree = "<group>";
+		};
+		777F332A1BE3C86800A1AD01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77531751161C3F5B00CA2C57 /* CTPitchTracker.h */,
+				77531752161C3F5B00CA2C57 /* CTPitchTracker.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		777F332B1BE3C87900A1AD01 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				770B6FCC14E004880092DAEC /* CTViewController.h */,
+				770B6FCD14E004880092DAEC /* CTViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
