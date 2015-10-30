@@ -12,19 +12,17 @@
 		770B6FBF14E004880092DAEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FBD14E004880092DAEC /* InfoPlist.strings */; };
 		770B6FC114E004880092DAEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC014E004880092DAEC /* main.m */; };
 		770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FC414E004880092DAEC /* CTAppDelegate.m */; };
-		770B6FC814E004880092DAEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */; };
-		770B6FCB14E004880092DAEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */; };
+		770B6FC814E004880092DAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B6FC614E004880092DAEC /* Main.storyboard */; };
 		770B6FCE14E004880092DAEC /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B6FCD14E004880092DAEC /* CTViewController.m */; };
-		77531742161B519C00CA2C57 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77531741161B519C00CA2C57 /* Accelerate.framework */; };
-		77531750161C3E4100CA2C57 /* libdywapitchtrack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */; };
-		77531753161C3F5B00CA2C57 /* CTPitchTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 77531752161C3F5B00CA2C57 /* CTPitchTracker.mm */; };
-		77531761161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531760161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m */; };
-		77531764161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531763161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m */; };
+		7713A3FB162470DD0033C735 /* dywapitchtrack.c in Sources */ = {isa = PBXBuildFile; fileRef = 7713A3F9162470DD0033C735 /* dywapitchtrack.c */; };
+		7713A3FD162471EF0033C735 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7713A3FC162471EF0033C735 /* Accelerate.framework */; };
+		77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 77531752161C3F5B00CA2C57 /* CTPitchTracker.m */; };
 		7753176D161C6F0A00CA2C57 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */; };
 		7753176E161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531769161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp */; };
 		7753176F161C6F0A00CA2C57 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7753176B161C6F0A00CA2C57 /* CAXException.cpp */; };
 		77531772161C713500CA2C57 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77531770161C713500CA2C57 /* CADebugPrintf.cpp */; };
-		779720C314EDDB9900A0494D /* IosAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779720C214EDDB9900A0494D /* IosAudioController.m */; };
+		777F33241BE3C09600A1AD01 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */; };
+		777F33261BE3C0BA00A1AD01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777F33251BE3C0BA00A1AD01 /* Images.xcassets */; };
 		779720CB14EDDCBE00A0494D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779720CA14EDDCBD00A0494D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,19 +36,14 @@
 		770B6FC214E004880092DAEC /* Chrotun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chrotun-Prefix.pch"; sourceTree = "<group>"; };
 		770B6FC314E004880092DAEC /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
 		770B6FC414E004880092DAEC /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
-		770B6FC714E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		770B6FCA14E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		770B6FC714E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		770B6FCC14E004880092DAEC /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
 		770B6FCD14E004880092DAEC /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
-		77531741161B519C00CA2C57 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		7753174E161C3E4100CA2C57 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack.h; sourceTree = "<group>"; };
-		7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdywapitchtrack.a; path = Vendor/libdywapitchtrack.a; sourceTree = "<group>"; };
+		7713A3F9162470DD0033C735 /* dywapitchtrack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dywapitchtrack.c; sourceTree = "<group>"; };
+		7713A3FA162470DD0033C735 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dywapitchtrack.h; sourceTree = "<group>"; };
+		7713A3FC162471EF0033C735 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		77531751161C3F5B00CA2C57 /* CTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPitchTracker.h; sourceTree = "<group>"; };
-		77531752161C3F5B00CA2C57 /* CTPitchTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CTPitchTracker.mm; sourceTree = "<group>"; };
-		7753175F161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeGrownFFTTracker.h; sourceTree = "<group>"; };
-		77531760161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHomeGrownFFTTracker.m; sourceTree = "<group>"; };
-		77531762161C505300CA2C57 /* CTAccelerateFFTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAccelerateFFTPitchTracker.h; sourceTree = "<group>"; };
-		77531763161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAccelerateFFTPitchTracker.m; sourceTree = "<group>"; };
+		77531752161C3F5B00CA2C57 /* CTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPitchTracker.m; sourceTree = "<group>"; };
 		77531766161C6F0A00CA2C57 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
 		77531767161C6F0A00CA2C57 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
 		77531768161C6F0A00CA2C57 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
@@ -60,8 +53,8 @@
 		7753176C161C6F0A00CA2C57 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		77531770161C713500CA2C57 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
 		77531771161C713500CA2C57 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
-		779720C114EDDB9900A0494D /* IosAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IosAudioController.h; sourceTree = "<group>"; };
-		779720C214EDDB9900A0494D /* IosAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IosAudioController.m; sourceTree = "<group>"; };
+		777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		777F33251BE3C0BA00A1AD01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		779720CA14EDDCBD00A0494D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -70,11 +63,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77531742161B519C00CA2C57 /* Accelerate.framework in Frameworks */,
+				7713A3FD162471EF0033C735 /* Accelerate.framework in Frameworks */,
 				779720CB14EDDCBE00A0494D /* AudioToolbox.framework in Frameworks */,
 				770B6FB514E004880092DAEC /* UIKit.framework in Frameworks */,
 				770B6FB714E004880092DAEC /* Foundation.framework in Frameworks */,
-				77531750161C3E4100CA2C57 /* libdywapitchtrack.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +93,8 @@
 		770B6FB314E004880092DAEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7713A3FC162471EF0033C735 /* Accelerate.framework */,
 				77531765161C6F0A00CA2C57 /* iPublicUtility */,
-				7753174E161C3E4100CA2C57 /* dywapitchtrack.h */,
-				7753174F161C3E4100CA2C57 /* libdywapitchtrack.a */,
-				77531741161B519C00CA2C57 /* Accelerate.framework */,
 				779720CA14EDDCBD00A0494D /* AudioToolbox.framework */,
 				770B6FB414E004880092DAEC /* UIKit.framework */,
 				770B6FB614E004880092DAEC /* Foundation.framework */,
@@ -115,20 +105,15 @@
 		770B6FBA14E004880092DAEC /* Chrotun */ = {
 			isa = PBXGroup;
 			children = (
+				770B6FC614E004880092DAEC /* Main.storyboard */,
+				777F33231BE3C09500A1AD01 /* Launch Screen.storyboard */,
+				7713A3FA162470DD0033C735 /* dywapitchtrack.h */,
+				7713A3F9162470DD0033C735 /* dywapitchtrack.c */,
 				77531751161C3F5B00CA2C57 /* CTPitchTracker.h */,
-				77531752161C3F5B00CA2C57 /* CTPitchTracker.mm */,
-				77531762161C505300CA2C57 /* CTAccelerateFFTPitchTracker.h */,
-				77531763161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m */,
-				7753175F161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.h */,
-				77531760161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m */,
-				779720C114EDDB9900A0494D /* IosAudioController.h */,
-				779720C214EDDB9900A0494D /* IosAudioController.m */,
-				770B6FC314E004880092DAEC /* CTAppDelegate.h */,
-				770B6FC414E004880092DAEC /* CTAppDelegate.m */,
-				770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */,
-				770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */,
+				77531752161C3F5B00CA2C57 /* CTPitchTracker.m */,
 				770B6FCC14E004880092DAEC /* CTViewController.h */,
 				770B6FCD14E004880092DAEC /* CTViewController.m */,
+				777F33251BE3C0BA00A1AD01 /* Images.xcassets */,
 				770B6FBB14E004880092DAEC /* Supporting Files */,
 			);
 			path = Chrotun;
@@ -137,6 +122,8 @@
 		770B6FBB14E004880092DAEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				770B6FC314E004880092DAEC /* CTAppDelegate.h */,
+				770B6FC414E004880092DAEC /* CTAppDelegate.m */,
 				770B6FBC14E004880092DAEC /* Chrotun-Info.plist */,
 				770B6FBD14E004880092DAEC /* InfoPlist.strings */,
 				770B6FC014E004880092DAEC /* main.m */,
@@ -158,7 +145,8 @@
 				7753176B161C6F0A00CA2C57 /* CAXException.cpp */,
 				7753176C161C6F0A00CA2C57 /* CAXException.h */,
 			);
-			path = iPublicUtility;
+			name = iPublicUtility;
+			path = Vendor/iPublicUtility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +175,7 @@
 		770B6FA714E004880092DAEC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0710;
 			};
 			buildConfigurationList = 770B6FAA14E004880092DAEC /* Build configuration list for PBXProject "Chrotun" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -211,9 +199,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777F33241BE3C09600A1AD01 /* Launch Screen.storyboard in Resources */,
+				777F33261BE3C0BA00A1AD01 /* Images.xcassets in Resources */,
 				770B6FBF14E004880092DAEC /* InfoPlist.strings in Resources */,
-				770B6FC814E004880092DAEC /* MainStoryboard_iPhone.storyboard in Resources */,
-				770B6FCB14E004880092DAEC /* MainStoryboard_iPad.storyboard in Resources */,
+				770B6FC814E004880092DAEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,14 +216,12 @@
 				770B6FC114E004880092DAEC /* main.m in Sources */,
 				770B6FC514E004880092DAEC /* CTAppDelegate.m in Sources */,
 				770B6FCE14E004880092DAEC /* CTViewController.m in Sources */,
-				779720C314EDDB9900A0494D /* IosAudioController.m in Sources */,
-				77531753161C3F5B00CA2C57 /* CTPitchTracker.mm in Sources */,
-				77531761161C4E1A00CA2C57 /* CTHomeGrownFFTTracker.m in Sources */,
-				77531764161C505300CA2C57 /* CTAccelerateFFTPitchTracker.m in Sources */,
+				77531753161C3F5B00CA2C57 /* CTPitchTracker.m in Sources */,
 				7753176D161C6F0A00CA2C57 /* CADebugMacros.cpp in Sources */,
 				7753176E161C6F0A00CA2C57 /* CAStreamBasicDescription.cpp in Sources */,
 				7753176F161C6F0A00CA2C57 /* CAXException.cpp in Sources */,
 				77531772161C713500CA2C57 /* CADebugPrintf.cpp in Sources */,
+				7713A3FB162470DD0033C735 /* dywapitchtrack.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,20 +236,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		770B6FC614E004880092DAEC /* MainStoryboard_iPhone.storyboard */ = {
+		770B6FC614E004880092DAEC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				770B6FC714E004880092DAEC /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		770B6FC914E004880092DAEC /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				770B6FCA14E004880092DAEC /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -272,10 +251,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -288,7 +267,8 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,7 +278,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -307,7 +286,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,6 +297,7 @@
 		770B6FD214E004880092DAEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chrotun/Chrotun-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -331,7 +311,9 @@
 					"-x",
 					"objective-c++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romopro.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -340,6 +322,7 @@
 		770B6FD314E004880092DAEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Axel Niklasson";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Niklasson";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -355,9 +338,11 @@
 					"-x",
 					"objective-c++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romopro.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BF197ED8-46BA-4DCB-918C-3752D049EDB6";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BF197ED8-46BA-4DCB-918C-3752D049EDB6";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -367,7 +352,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -376,7 +360,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,6 +371,7 @@
 		7716B1A314F3B74A0028CC9E /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Niklasson";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chrotun/Chrotun-Prefix.pch";
@@ -401,8 +386,10 @@
 					"-x",
 					"objective-c++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romopro.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E2B0E1C-38A8-49EB-B01A-C4E612898C8B";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};

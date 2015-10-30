@@ -19,3 +19,4 @@
     #define NSLog(...) {}
 #endif
 
+#define TALL_IPHONE_MODE ([UIScreen mainScreen].bounds.size.height == 568

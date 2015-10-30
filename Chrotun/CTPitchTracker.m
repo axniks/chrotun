@@ -11,28 +11,22 @@
 #import "CAXException.h"
 #import "dywapitchtrack.h"
 
-const int kMaxRecentPitches = 20;
-const Float64 kGraphSampleRate = 44100.0;
+const int kBytesPerSample = 4;
+const int kSamplesNeeded = 2048;
 
 @interface CTPitchTracker()
 @property (nonatomic) AudioUnit rioUnit;
 // Audio Stream Descriptions
 @property (nonatomic) CAStreamBasicDescription outputCASBD;
+
+@property (nonatomic, strong) NSMutableData *buffer;
+
 @property (nonatomic) double sinPhase;
 @property (nonatomic) dywapitchtracker tracker;
-@property (nonatomic, strong) NSMutableArray *recentPitches;
 @property (nonatomic) dispatch_queue_t analysisQueue;
-
 @end
 
 @implementation CTPitchTracker
-- (NSMutableArray *)recentPitches {
-    if (!_recentPitches) {
-        _recentPitches = [[NSMutableArray alloc] initWithCapacity:kMaxRecentPitches];
-    }
-    return _recentPitches;
-}
-
 - (dispatch_queue_t)analysisQueue {
     if (!_analysisQueue) {
        _analysisQueue = dispatch_queue_create("com.stat10.chrotun.analysis", NULL);
@@ -52,8 +46,8 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
 	// Samples are 32 bits = 4 bytes.
 	// 1 frame includes only 1 sample
     buffer.mNumberChannels = 1;
-    buffer.mDataByteSize = inNumberFrames * 4;
-    buffer.mData = malloc( inNumberFrames * 4 );
+    buffer.mDataByteSize = inNumberFrames * kBytesPerSample;
+    buffer.mData = malloc( inNumberFrames * kBytesPerSample );
     
     // Put buffer in a AudioBufferList
     AudioBufferList bufferList;
@@ -89,9 +83,9 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
     // set our required format - LPCM non-interleaved 32 bit floating point
     CAStreamBasicDescription outFormat = CAStreamBasicDescription(44100, // sample rate
                                                                   kAudioFormatLinearPCM, // format id
-                                                                  4, // bytes per packet
+                                                                  kBytesPerSample, // bytes per packet
                                                                   1, // frames per packet
-                                                                  4, // bytes per frame
+                                                                  kBytesPerSample, // bytes per frame
                                                                   1, // channels per frame
                                                                   32, // bits per channel
                                                                 kAudioFormatFlagIsFloat | kAudioFormatFlagIsNonInterleaved);
@@ -130,13 +124,6 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
 	catch (...) {
 		fprintf(stderr, "An unknown error occurred\n");
 	}
-	
-    // Allocate our own buffers (1 channel, 16 bits per sample, thus 16 bits per frame, thus 2 bytes per frame).
-    // Practice learns the buffers used contain 512 frames, if this changes it will be fixed in processAudio.
-    // will need float for accellerate fft (input is 16 bit signed integer) so make space...
-    _tempBuffer.mNumberChannels = outFormat.mChannelsPerFrame;
-    _tempBuffer.mDataByteSize = 512 * outFormat.mBytesPerFrame * 2;
-    _tempBuffer.mData = malloc( self.tempBuffer.mDataByteSize );
 
 }
 
@@ -149,52 +136,35 @@ static OSStatus renderInput(void *inRefCon, AudioUnitRenderActionFlags *ioAction
 }
 
 - (void) dealloc {
-    dispatch_release(self.analysisQueue);
+//    dispatch_release(self.analysisQueue);
 }
 
-- (void) processAudio: (AudioBufferList*) bufferList{
+- (void) processAudio:(AudioBufferList*)bufferList {
     
-    AudioBuffer sourceBuffer = bufferList->mBuffers[0];
-	
-	// fix tempBuffer size if it's the wrong size
-	if (self.tempBuffer.mDataByteSize != sourceBuffer.mDataByteSize) {
-		free(self.tempBuffer.mData);
-		_tempBuffer.mDataByteSize = sourceBuffer.mDataByteSize;
-		_tempBuffer.mData = malloc(sourceBuffer.mDataByteSize);
-	}
-    
-	// copy incoming audio data to temporary buffer
-    memcpy(self.tempBuffer.mData, bufferList->mBuffers[0].mData, bufferList->mBuffers[0].mDataByteSize);
-
-    // calculate pitch
-    int numberOfSamples = self.tempBuffer.mDataByteSize/4;
-    float *samplesAsFloat = (float *)self.tempBuffer.mData;
-    double *samplesAsDouble = (double *)malloc(numberOfSamples * sizeof(double));
-    
-    
-    for (int i = 0; i < numberOfSamples; i++) {
-        samplesAsDouble[i] = (double)samplesAsFloat[i];
+    // create buffer with samples or append to existing buffer
+    if (!self.buffer) {
+        self.buffer = [NSMutableData dataWithBytes:bufferList->mBuffers[0].mData length:bufferList->mBuffers[0].mDataByteSize];
+    } else {
+        [self.buffer appendBytes:bufferList->mBuffers[0].mData length:bufferList->mBuffers[0].mDataByteSize];
     }
     
-    self.currentPitch = [NSNumber numberWithDouble:dywapitch_computepitch(&_tracker, samplesAsDouble, 0, numberOfSamples)];
-    if (self.recentPitches.count == kMaxRecentPitches) {
-        [self.recentPitches removeLastObject];
-    }
-    [self.recentPitches insertObject:self.currentPitch atIndex:0];
-    
-    double runningTotal = 0.0;
-    int validSamples = [self.recentPitches count];
-    for(NSNumber *number in self.recentPitches)
-    {
-        if ([number doubleValue] > 0.0) {
-            runningTotal += [number doubleValue];
-        } else {
-            validSamples--;
+    // check if we have enough samples to calculate pitch
+    int numberOfSamples = self.buffer.length/kBytesPerSample;
+    if (numberOfSamples >= kSamplesNeeded) {
+        
+        // convert samples to double
+        float *samplesAsFloat = (float *)self.buffer.mutableBytes;
+        double *samplesAsDouble = (double *)malloc(numberOfSamples * sizeof(double));
+        for (int i = 0; i < numberOfSamples; i++) {
+            samplesAsDouble[i] = (double)samplesAsFloat[i];
         }
-    }
     
-    self.averagePitch = [NSNumber numberWithDouble:(runningTotal / validSamples)];
+        // calculate pitch
+        self.currentPitch = [NSNumber numberWithDouble:dywapitch_computepitch(&_tracker, samplesAsDouble, 0, numberOfSamples)];
 
+        // purge buffer
+        self.buffer = nil;
+    }
 }
 
 @end

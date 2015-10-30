@@ -10,11 +10,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface CTPitchTracker : NSObject
-@property (nonatomic) AudioBuffer tempBuffer;
 
 @property (atomic, strong) NSNumber *currentPitch;
-@property (atomic, strong) NSNumber *averagePitch;
 
 - (void) processAudio: (AudioBufferList*) bufferList;
-
 @end
