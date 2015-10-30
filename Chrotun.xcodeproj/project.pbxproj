@@ -37,8 +37,8 @@
 		770B6FC314E004880092DAEC /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
 		770B6FC414E004880092DAEC /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
 		770B6FC714E004880092DAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7713A3F9162470DD0033C735 /* dywapitchtrack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dywapitchtrack.c; path = Vendor/dywapitchtrack/dywapitchtrack.c; sourceTree = "<group>"; };
-		7713A3FA162470DD0033C735 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack/dywapitchtrack.h; sourceTree = "<group>"; };
+		7713A3F9162470DD0033C735 /* dywapitchtrack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dywapitchtrack.c; path = Vendor/dywapitchtrack/src/dywapitchtrack.c; sourceTree = "<group>"; };
+		7713A3FA162470DD0033C735 /* dywapitchtrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dywapitchtrack.h; path = Vendor/dywapitchtrack/src/dywapitchtrack.h; sourceTree = "<group>"; };
 		7713A3FC162471EF0033C735 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		77531751161C3F5B00CA2C57 /* CTPitchTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPitchTracker.h; path = Model/CTPitchTracker.h; sourceTree = "<group>"; };
 		77531752161C3F5B00CA2C57 /* CTPitchTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPitchTracker.m; path = Model/CTPitchTracker.m; sourceTree = "<group>"; };
